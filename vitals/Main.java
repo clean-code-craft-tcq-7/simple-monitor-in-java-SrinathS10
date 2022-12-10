@@ -25,7 +25,7 @@ public class Main {
         BMS = new BMSImplementation();
         testBatteryStatus();
 
-        // for checking battery status with I/O
+        // for printing battery status with I/O
         float temperature = 25.5f, soc = 75f, chargeRate = 1.2f;
         BMS.printBatteryStatus(temperature, soc, chargeRate);
         System.out.println("----------");
