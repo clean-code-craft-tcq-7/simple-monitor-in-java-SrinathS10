@@ -21,30 +21,16 @@ public class Main {
         assert (BMS.isBatteryOkay(BMSLimits.maxTemperature, BMSLimits.maxSoc, BMSLimits.maxChargeRate));
     }
 
-    // for I/O
-    public static void printBatteryStatus(float temperature, float soc, float chargeRate){
-        if(BMS.isBatteryOkay(temperature,soc,chargeRate)){
-            System.out.println("Battery is okay");
-        }
-        else {
-            System.out.println("Battery is not okay!!!");
-            if (!BMS.isTemperatureValid(temperature)) {
-                System.out.println("Temperature is out of range!");
-            }
-            if (!BMS.isSocValid(soc)) {
-                System.out.println("State of Charge is out of range!");
-            }
-            if (!BMS.isChargeRateValid(chargeRate)) {
-                System.out.println("Charge Rate is out of range!");
-            }
-        }
-    }
-
     public static void main(String[] args) {
         BMS = new BMSImplementation();
         testBatteryStatus();
 
         // for checking battery status with I/O
-        printBatteryStatus(25.5f, 90f, 1.2f);
+        if(BMS.checkBatteryWithLog(25.5f, 90f, 1.2f)){
+            System.out.println("Battery is okay");
+        }
+        else{
+            System.out.println("Battery is not okay!!");
+        }
     }
 }
