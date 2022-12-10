@@ -27,20 +27,15 @@ public class BMSImplementation implements BatteryManagementSystem {
 
     // for I/O
     @Override
-    public boolean checkBatteryWithLog(float temperature, float soc, float chargeRate) {
-        boolean result = true;
+    public void printBatteryStatus(float temperature, float soc, float chargeRate) {
         if (!isTemperatureValid(temperature)) {
             System.out.println("Temperature is out of range!");
-            result = false;
         }
         if (!isSocValid(soc)) {
             System.out.println("State of Charge is out of range!");
-            result = false;
         }
         if (!isChargeRateValid(chargeRate)) {
             System.out.println("Charge Rate is out of range!");
-            result = false;
         }
-        return result;
     }
 }

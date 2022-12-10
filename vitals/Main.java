@@ -26,11 +26,8 @@ public class Main {
         testBatteryStatus();
 
         // for checking battery status with I/O
-        if(BMS.checkBatteryWithLog(25.5f, 90f, 1.2f)){
-            System.out.println("Battery is okay");
-        }
-        else{
-            System.out.println("Battery is not okay!!");
-        }
+        float temperature = 25.5f, soc = 75f, chargeRate = 1.2f;
+        BMS.printBatteryStatus(temperature, soc, chargeRate);
+        System.out.println("----------");
     }
 }

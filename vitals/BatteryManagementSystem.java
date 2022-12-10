@@ -5,5 +5,5 @@ public interface BatteryManagementSystem {
     boolean isSocValid(float soc);
     boolean isChargeRateValid(float chargeRate);
     boolean isBatteryOkay(float temperature, float soc, float chargeRate);
-    boolean checkBatteryWithLog(float temperature, float soc, float chargeRate);
+    void printBatteryStatus(float temperature, float soc, float chargeRate);
 }
