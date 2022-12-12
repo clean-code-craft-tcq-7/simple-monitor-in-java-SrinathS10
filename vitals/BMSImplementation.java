@@ -26,7 +26,7 @@ public class BMSImplementation implements BatteryManagementSystem {
     }
 
     // for I/O
-    public void printEntityStatus(ValueValidator validator,float value, String msg){
+    public void printPropertyErrorStatus(ValueValidator validator,float value, String msg){
         if(!validator.isValueValid(value)){
             System.out.println(msg);
         }
@@ -34,8 +34,8 @@ public class BMSImplementation implements BatteryManagementSystem {
 
     @Override
     public void printBatteryStatus(float temperature, float soc, float chargeRate) {
-        printEntityStatus(this::isTemperatureValid,temperature,"Temperature is out of range!");
-        printEntityStatus(this::isSocValid,soc,"State of charge is out of range!");
-        printEntityStatus(this::isChargeRateValid,chargeRate,"Charge Rate is out of range!");
+        printPropertyErrorStatus(this::isTemperatureValid,temperature,"Temperature is out of range!");
+        printPropertyErrorStatus(this::isSocValid,soc,"State of charge is out of range!");
+        printPropertyErrorStatus(this::isChargeRateValid,chargeRate,"Charge Rate is out of range!");
     }
 }
