@@ -1,0 +1,22 @@
+TEMPERATURE_LOW_WARN_DE = WARNUNG: Annäherung an niedrige Temperatur!
+TEMPERATURE_LOW_BREACH_DE = VERLETZUNG: Temperatur niedrig!!!
+TEMPERATURE_HIGH_WARN_DE = WARNUNG: Annäherung an hohe Temperatur!
+TEMPERATURE_HIGH_BREACH_DE = VERLETZUNG: Die Temperatur ist hoch!!!
+TEMPERATURE_LOW_WARN_EN = WARNING: Approaching low temperature!
+TEMPERATURE_LOW_BREACH_EN = BREACH: Temperature is low!!!
+TEMPERATURE_HIGH_WARN_EN = WARNING: Approaching high temperature!
+TEMPERATURE_HIGH_BREACH_EN = BREACH: Temperature is high!!!
+
+SOC_LOW_WARN_DE = WARNUNG: SoC - Annäherung an Entladung!
+SOC_LOW_BREACH_DE = VERLETZUNG: SoC - Entladegrenze überschritten!!!
+SOC_HIGH_WARN_DE = WARNUNG: SoC - Ladespitze nähert sich!
+SOC_HIGH_BREACH_DE = VERLETZUNG: SoC - Spitzenladegrenze überschritten!!!
+SOC_LOW_WARN_EN = WARNING: SoC - Approaching discharge!
+SOC_LOW_BREACH_EN = BREACH: SoC - Discharge limit exceeded!!!
+SOC_HIGH_WARN_EN = WARNING: SoC - Approaching charge-peak!
+SOC_HIGH_BREACH_EN = BREACH: SoC - Peak charge limit exceeded!!!
+
+CHARGE_RATE_HIGH_WARN_DE = WARNUNG: Annäherung an den maximalen Ladestrom!
+CHARGE_RATE_HIGH_BREACH_DE = VERLETZUNG: Maximale Belastungsgrenze überschritten!!!
+CHARGE_RATE_HIGH_WARN_EN = WARNING: Approaching peak charge rate!
+CHARGE_RATE_HIGH_BREACH_EN = BREACH: Peak charge rate limit exceeded!!!
