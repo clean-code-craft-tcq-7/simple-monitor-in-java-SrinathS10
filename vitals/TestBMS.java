@@ -63,14 +63,18 @@ public class TestBMS {
 
         prop = new SOC();
         message = Message.getMessage(prop,Message.highBreach).toUpperCase();
-        assert (message.contains("BREACH") && message.contains("CHARGE LIMIT"));
+        assert (message.contains("BREACH"));
+        assert (message.contains("CHARGE LIMIT"));
         message = Message.getMessage(prop,Message.lowWarn).toUpperCase();
-        assert (message.contains("WARNING") && message.contains("APPROACHING DISCHARGE"));
+        assert (message.contains("WARNING"));
+        assert (message.contains("APPROACHING DISCHARGE"));
 
         prop = new ChargeRate();
         message = Message.getMessage(prop,Message.highWarn).toUpperCase();
-        assert (message.contains("WARNING") && message.contains("CHARGE RATE"));
+        assert (message.contains("WARNING"));
+        assert (message.contains("CHARGE RATE"));
         message = Message.getMessage(prop,Message.highBreach).toUpperCase();
-        assert (message.contains("BREACH") && message.contains("CHARGE RATE"));
+        assert (message.contains("BREACH"));
+        assert (message.contains("CHARGE RATE"));
     }
 }
