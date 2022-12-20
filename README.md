@@ -62,6 +62,7 @@ Shorten the Semantic distance
 ## Extensions Implemented
 - Extension 1: Early Warning
   - Declared a base class BatteryProperty add extended it for different properties
+  - Warning currently enabled for Temperature and SOC
 - Extension 2: Support a language in addition to English
   - Language code is passed as argument during runtime. Default language assumed as English
   - Language codes

@@ -55,4 +55,22 @@ public class TestBMS {
         assert (!BMS.isChargeRateValid(1.2f));
         assert (!BMS.isTemperatureValid(105f));
     }
+
+    public static void testMessages(){
+        Message.setMessageLanguage(new String[]{"EN"});
+        BatteryProperty prop;
+        String message;
+
+        prop = new SOC();
+        message = Message.getMessage(prop,Message.highBreach).toUpperCase();
+        assert (message.contains("BREACH") && message.contains("CHARGE LIMIT"));
+        message = Message.getMessage(prop,Message.lowWarn).toUpperCase();
+        assert (message.contains("WARNING") && message.contains("APPROACHING DISCHARGE"));
+
+        prop = new ChargeRate();
+        message = Message.getMessage(prop,Message.highWarn).toUpperCase();
+        assert (message.contains("WARNING") && message.contains("CHARGE RATE"));
+        message = Message.getMessage(prop,Message.highBreach).toUpperCase();
+        assert (message.contains("BREACH") && message.contains("CHARGE RATE"));
+    }
 }
