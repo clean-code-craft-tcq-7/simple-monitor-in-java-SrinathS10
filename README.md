@@ -57,3 +57,18 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Apect oriented to capture repeating aspects
+
+
+## Extensions Implemented
+- Extension 1: Early Warning
+  - Declared a base class BatteryProperty add extended it for different properties
+  - Warning currently enabled for Temperature and SOC
+- Extension 2: Support a language in addition to English
+  - Language code is passed as argument during runtime. Default language assumed as English
+  - Messages are stored in BatteryMessages.txt file with following key structure 
+    - PROPERTY_NAME + _ + MESSAGE_TYPE + _ + LANGUAGE_CODE
+  - If we need to add new language, then no code changes required
+  - Language codes
+    - English - EN
+    - Deutsch - DE
+  

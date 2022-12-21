@@ -1,23 +1,23 @@
 package vitals;
 
 public class Main {
-    static boolean batteryIsOk(float temperature, float soc, float chargeRate) {
-        if(temperature < 0 || temperature > 45) {
-            System.out.println("Temperature is out of range!");
-            return false;
-        } else if(soc < 20 || soc > 80) {
-            System.out.println("State of Charge is out of range!");
-            return false;
-        } else if(chargeRate > 0.8) {
-            System.out.println("Charge Rate is out of range!");
-            return false;
-        }
-        return true;
-    }
+    private static BatteryManagementSystem BMS;
 
     public static void main(String[] args) {
-        assert(batteryIsOk(25, 70, 0.7f) == true);
-        assert(batteryIsOk(50, 85, 0.0f) == false);
-        System.out.println("Some more tests needed");
+        BMS = new BMSImplementation();
+        TestBMS.testPropertyStatus(BMS);
+        TestBMS.testBatteryStatus(BMS);
+        TestBMS.testMessages();
+
+        // for printing battery status with I/O
+        Message.setMessageLanguage(args);
+        BMS.printBatteryStatus(25.5f, 75f, 1.2f);
+        System.out.println("----------");
+        BMS.printBatteryStatus(1.5f, 23.5f, 0.775f);
+        System.out.println("----------");
+        BMS.printBatteryStatus(60f, 80f, 0f);
+        System.out.println("----------");
+        BMS.printBatteryStatus(35f, 50f, 0.4f);
+        System.out.println("----------");
     }
 }
