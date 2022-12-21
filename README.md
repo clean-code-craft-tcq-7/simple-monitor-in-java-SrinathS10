@@ -65,8 +65,10 @@ Shorten the Semantic distance
   - Warning currently enabled for Temperature and SOC
 - Extension 2: Support a language in addition to English
   - Language code is passed as argument during runtime. Default language assumed as English
+  - Messages are stored in BatteryMessages.txt file with following key structure 
+    - PROPERTY_NAME + _ + MESSAGE_TYPE + _ + LANGUAGE_CODE
+  - If we need to add new language, then no code changes required
   - Language codes
     - English - EN
     - Deutsch - DE
-  - Messages are stored in BatteryMessages.txt file with following key structure
-    - PROPERTY_NAME + _ + MESSAGE_TYPE + _ + LANGUAGE_CODE
+  
